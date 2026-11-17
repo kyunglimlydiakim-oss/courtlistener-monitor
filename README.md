@@ -23,6 +23,12 @@
 ## API 한도
 CourtListener 검색 API는 계정당 **시간당 50회**다(2026-11-17 실측 응답 `Rate limit exceeded: 50/hour`). 그래서 당사자명 30개씩 묶어 1회 실행에 3~6회만 요청한다. 하루 두 번 실행이면 하루 10회 안팎만 써서 감시 기업을 크게 늘려도 여유가 있다.
 
+## 후속 진행 추적
+- 신규로 잡힌 사건(반복성 사건 제외)은 자동으로 `state/follow.json` 추적 목록에 들어가 접수 후 120일간 새 기록(docket entry)을 확인한다.
+- 판결·기각·합의·이송·병합·대표원고 선정·클레임 해석·가처분·수정 소장 등은 '주요', 송달·변호사 선임·배심 요구 등은 '일상'으로 분류한다.
+- 오래 볼 사건은 고정한다: `python3 monitor.py --follow-add <docket_id>` (CourtListener 사건 주소의 /docket/ 뒤 숫자)
+- 목록 확인 `--follow-list`, 제거 `--follow-remove <docket_id>`
+
 ## 로컬 실행
 ```
 COURTLISTENER_TOKEN=xxxx python3 monitor.py --since 2026-11-01 --no-notify

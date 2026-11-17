@@ -134,6 +134,121 @@ def nos_label(suit):
     return NOS_LABEL.get(code, suit)
 
 
+FOLLOW_FILE = STATE_DIR / "follow.json"          # 추적 중인 사건
+SEEN_ENTRIES_FILE = STATE_DIR / "seen_entries.json"
+FOLLOW_DAYS = 120          # 자동 추가된 사건은 접수 후 이 기간만 추적 (고정 pinned 은 계속)
+FOLLOW_BATCH = 40
+
+# 기사 가치가 있는 진행 단계. 하나라도 맞으면 '주요'
+MAJOR_PATTERNS = [
+    "verdict", "judgment", "jury trial", "trial date", "bench trial", "injunction", "restraining order",
+    "motion to dismiss", "order dismissing", "voluntary dismissal", "dismissed", "stipulation of dismissal",
+    "notice of settlement", "settlement agreement", "settled", "transfer", "consolidat", "lead plaintiff",
+    "claim construction", "markman", "summary judgment", "motion to stay", "order staying", "sanction",
+    "inter partes", "default", "remand", "notice of appeal", "mandamus", "removal",
+    "order granting", "order denying", "memorandum opinion", "opinion and order",
+    "answer to complaint", "counterclaim", "amended complaint", "class certification", "class action",
+]
+# 주요 단어가 섞여도 일상으로 보는 기록(우선 적용)
+MINOR_OVERRIDE = [
+    "jury demand", "summons returned", "summons issued", "notice to all counsel", "standard procedures",
+    "notice of appearance", "pro hac vice", "civil cover sheet", "disclosure statement",
+    "corporate disclosure", "certificate of interested", "consent to proceed", "case assigned",
+    "case reassigned",
+]
+
+
+def classify_entry(text):
+    t = (text or "").lower()
+    if any(k in t for k in MINOR_OVERRIDE):
+        return "일상"
+    if any(k in t for k in MAJOR_PATTERNS):
+        return "주요"
+    if t.strip().startswith("answer"):
+        return "주요"
+    return "일상"
+
+
+def follow_add_from_cases(follow, new_cases, now):
+    for c in new_cases:
+        if c.get("routine"):
+            continue
+        did = c["url"].rstrip("/").split("/docket/")[-1].split("/")[0]
+        follow.setdefault(did, {
+            "caseName": c["caseName"], "company": c["company"], "court_id": c["court_id"],
+            "dateFiled": c["dateFiled"], "url": c["url"], "added": now.isoformat(), "pinned": False,
+        })
+
+
+def active_follow_ids(follow, now):
+    ids = []
+    for did, f in follow.items():
+        try:
+            filed = dt.datetime.fromisoformat(f.get("dateFiled") or f["added"][:10])
+        except ValueError:
+            filed = now.replace(tzinfo=None)
+        if f.get("pinned") or (now.replace(tzinfo=None) - filed.replace(tzinfo=None)).days <= FOLLOW_DAYS:
+            ids.append(did)
+    return ids
+
+
+def check_followups(follow, since, token, now):
+    """추적 사건의 새 docket entry를 묶음 조회한다. 반환: 새 기록 목록"""
+    seen = load_json(SEEN_ENTRIES_FILE, {})
+    ids = active_follow_ids(follow, now)
+    updates = []
+    for batch in chunk(ids, FOLLOW_BATCH):
+        q = f"docket_id:({' OR '.join(batch)}) AND entry_date_filed:[{since:%Y-%m-%d} TO *]"
+        url = API + "?" + urllib.parse.urlencode({"type": "rd", "q": q, "order_by": "entry_date_filed desc"})
+        pages = 0
+        while url and pages < MAX_PAGES:
+            data = http_get(url, token)
+            pages += 1
+            for r in data.get("results", []):
+                if r.get("attachment_number"):        # 첨부 문서는 본 기록에 묶는다
+                    continue
+                desc = (r.get("description") or r.get("short_description") or "").strip()
+                key = f"{r.get('docket_id')}|{r.get('entry_number')}|{r.get('entry_date_filed')}|{desc[:60]}"
+                if key in seen:
+                    continue
+                seen[key] = now.isoformat()
+                f = follow.get(str(r.get("docket_id")), {})
+                updates.append({
+                    "docket_id": r.get("docket_id"), "company": f.get("company", ""),
+                    "caseName": f.get("caseName", ""), "court_id": f.get("court_id", ""),
+                    "entry_date": r.get("entry_date_filed"), "entry_number": r.get("entry_number"),
+                    "description": desc, "short": r.get("short_description") or "",
+                    # 1번 기록(소장·이송 신청)은 신규 사건 알림에서 이미 다뤘으므로 일상으로 본다
+                    "level": "일상" if r.get("entry_number") in (1, "1") or (r.get("short_description") or "").strip() == "Complaint"
+                             else classify_entry(desc + " " + (r.get("short_description") or "")),
+                    "pdf": r.get("is_available"), "url": BASE + (r.get("absolute_url") or "") if r.get("absolute_url") else f.get("url", ""),
+                })
+            url = data.get("next")
+        time.sleep(1)
+    SEEN_ENTRIES_FILE.write_text(json.dumps(seen, ensure_ascii=False), encoding="utf-8")
+    return updates
+
+
+def render_updates(updates, now):
+    major = [u for u in updates if u["level"] == "주요"]
+    minor = [u for u in updates if u["level"] != "주요"]
+    lines = [f"# 추적 사건 진행 상황 ({now:%Y-%m-%d %H:%M} UTC)", "",
+             f"- 새 기록 {len(updates)}건 (주요 {len(major)}건, 일상 {len(minor)}건)", ""]
+    if major:
+        lines += ["## 주요 진행", ""]
+        for u in sorted(major, key=lambda x: x["entry_date"] or "", reverse=True):
+            lines += [f"### [{u['company']}] {u['caseName']}",
+                      f"- {u['entry_date']} · #{u['entry_number']} · {u['short'] or ''}",
+                      f"- {u['description'][:400]}",
+                      f"- 원문 PDF: {'있음' if u['pdf'] else '없음(PACER 구매 필요)'} · {u['url']}", ""]
+    if minor:
+        lines += ["## 일상 절차 (건수만)", ""]
+        from collections import Counter
+        for (comp, name), n in Counter((u["company"], u["caseName"]) for u in minor).items():
+            lines.append(f"- [{comp}] {name[:80]}: {n}건")
+    return "\n".join(lines)
+
+
 def load_json(p, default):
     try:
         return json.loads(p.read_text(encoding="utf-8"))
@@ -225,7 +340,26 @@ def main():
     ap.add_argument("--watchlist", default=str(ROOT / "watchlist.json"))
     ap.add_argument("--telegram-chat-id", action="store_true", help="봇에게 온 메시지에서 채팅 ID를 출력")
     ap.add_argument("--telegram-test", action="store_true", help="텔레그램 시험 메시지 발송")
+    ap.add_argument("--follow-add", metavar="DOCKET_ID", help="사건을 고정 추적 목록에 추가 (만료 없음)")
+    ap.add_argument("--follow-remove", metavar="DOCKET_ID", help="사건을 추적 목록에서 제거")
+    ap.add_argument("--follow-list", action="store_true", help="추적 목록 출력")
     args = ap.parse_args()
+
+    if args.follow_add or args.follow_remove or args.follow_list:
+        STATE_DIR.mkdir(exist_ok=True)
+        follow = load_json(FOLLOW_FILE, {})
+        if args.follow_add:
+            f = follow.setdefault(args.follow_add, {"caseName": "", "company": "수동 추가", "court_id": "",
+                                                     "dateFiled": "", "url": f"{BASE}/docket/{args.follow_add}/",
+                                                     "added": dt.datetime.now(dt.timezone.utc).isoformat()})
+            f["pinned"] = True
+        if args.follow_remove:
+            follow.pop(args.follow_remove, None)
+        if args.follow_list:
+            for did, f in follow.items():
+                print(did, "고정" if f.get("pinned") else "자동", f.get("dateFiled"), f.get("company"), f.get("caseName", "")[:70])
+        FOLLOW_FILE.write_text(json.dumps(follow, ensure_ascii=False, indent=1), encoding="utf-8")
+        return
 
     if args.telegram_chat_id:
         tok = os.environ["TELEGRAM_BOT_TOKEN"]
@@ -329,6 +463,26 @@ def main():
             notify(new_cases, report)
         elif first_run:
             print("첫 실행이라 알림은 보내지 않았다(기존 사건 대량 발송 방지).")
+
+    # 후속 진행 추적
+    follow = load_json(FOLLOW_FILE, {})
+    follow_add_from_cases(follow, new_cases, now)
+    updates = []
+    if not aborted:
+        try:
+            updates = check_followups(follow, since, token, now)
+        except RateLimited as e:
+            aborted = str(e)
+            print(f"[중단] 후속 조회: {e}", file=sys.stderr)
+    FOLLOW_FILE.write_text(json.dumps(follow, ensure_ascii=False, indent=1), encoding="utf-8")
+    major = [u for u in updates if u["level"] == "주요"]
+    print(f"추적 사건 {len(active_follow_ids(follow, now))}건, 새 기록 {len(updates)}건 (주요 {len(major)}건)")
+    if updates:
+        up = REPORT_DIR / f"updates_{now:%Y%m%d_%H%M}.md"
+        up.write_text(render_updates(updates, now), encoding="utf-8")
+        print(f"진행 보고서: {up}")
+    (REPORT_DIR / "latest_updates.json").write_text(
+        json.dumps({"generated": now.isoformat(), "updates": updates}, ensure_ascii=False, indent=1), encoding="utf-8")
 
     SEEN_FILE.write_text(json.dumps(seen, ensure_ascii=False, indent=0), encoding="utf-8")
     if not aborted:
