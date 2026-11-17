@@ -114,6 +114,19 @@ def search_batch(aliases, since, token, seen, first_run):
     return out
 
 
+# 기사 가치가 낮은 반복성 사건: 보고서 맨 아래로 묶고 텔레그램에선 건수만 알린다
+ROUTINE_PATTERNS = {
+    "Partnerships and Unincorporated Associations": "위조품 판매상 일괄 상표소송(Schedule A)",
+}
+
+
+def routine_tag(case_name):
+    for pat, label in ROUTINE_PATTERNS.items():
+        if pat.lower() in (case_name or "").lower():
+            return label
+    return ""
+
+
 def nos_label(suit):
     if not suit:
         return ""
@@ -136,6 +149,8 @@ def render_report(new_cases, since, now):
         f"- 신규 사건: {len(new_cases)}건",
         "",
     ]
+    routine = [c for c in new_cases if c.get("routine")]
+    new_cases = [c for c in new_cases if not c.get("routine")]
     by_group = {}
     for c in new_cases:
         by_group.setdefault(c["group"], []).append(c)
@@ -151,6 +166,11 @@ def render_report(new_cases, since, now):
                 f"- 링크: {c['url']}",
                 "",
             ]
+    if routine:
+        lines += [f"## 반복성 사건 ({len(routine)}건)", ""]
+        for c in routine:
+            lines.append(f"- [{c['company']}] {c['routine']} · {c['dateFiled']} · {c['court']} · {c['url']}")
+        lines.append("")
     lines += [
         "---",
         "※ 자동 매칭 결과다. 동명 기업·소액 사건이 섞일 수 있으니 기사화 전 원문(소장)과 PACER로 확인한다.",
@@ -159,11 +179,17 @@ def render_report(new_cases, since, now):
 
 
 def short_text(new_cases):
-    rows = [f"⚖️ 신규 소송 {len(new_cases)}건 감지"]
+    routine = [c for c in new_cases if c.get("routine")]
+    new_cases = [c for c in new_cases if not c.get("routine")]
+    rows = [f"⚖️ 신규 소송 {len(new_cases)}건 감지" + (f" (반복성 사건 {len(routine)}건 별도)" if routine else "")]
     for c in new_cases[:20]:
         rows.append(f"• [{c['company']}] {c['caseName'][:90]} | {c['court_id']} {c['dateFiled']} | {c['nos'] or '-'}\n  {c['url']}")
     if len(new_cases) > 20:
         rows.append(f"…외 {len(new_cases) - 20}건 (보고서 참조)")
+    if routine:
+        from collections import Counter
+        for (comp, lab), n in Counter((c["company"], c["routine"]) for c in routine).items():
+            rows.append(f"· {comp} {lab} {n}건")
     return "\n".join(rows)
 
 
@@ -271,6 +297,7 @@ def main():
                 "judge": r.get("assignedTo") or "",
                 "hits": list(dict.fromkeys(a for a, _, _ in hits)),
                 "url": BASE + (r.get("docket_absolute_url") or ""),
+                "routine": routine_tag(r.get("caseName")),
             })
         time.sleep(1)
 

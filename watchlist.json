@@ -2,55 +2,190 @@
   "_comment": "party 필드 검색어. 법인 정식명(미국 소송 당사자명) 위주로 넣는다. 너무 짧은 단어(예: 'LG', 'Arm')는 오탐이 많으니 피한다.",
   "groups": {
     "한국 기업": {
-      "삼성전자": ["Samsung Electronics", "Samsung Semiconductor", "Samsung Austin Semiconductor"],
-      "삼성디스플레이": ["Samsung Display"],
-      "삼성SDI": ["Samsung SDI"],
-      "삼성바이오로직스": ["Samsung Bioepis", "Samsung Biologics"],
-      "SK하이닉스": ["SK hynix", "SK Hynix"],
-      "SK온·SK이노베이션": ["SK On", "SK Innovation", "SK Battery America"],
-      "LG전자": ["LG Electronics"],
-      "LG에너지솔루션": ["LG Energy Solution", "LG Chem"],
-      "LG디스플레이": ["LG Display"],
-      "현대차그룹": ["Hyundai Motor", "Hyundai Motor America", "Kia America", "Kia Corporation", "Hyundai Mobis", "Hyundai Capital America"],
-      "HD현대·한화": ["HD Hyundai", "Hanwha", "Hanwha Q Cells", "Hanwha Ocean"],
-      "포스코": ["POSCO"],
-      "셀트리온": ["Celltrion"],
-      "쿠팡": ["Coupang"],
-      "네이버·카카오": ["NAVER Corporation", "Kakao Corp", "Webtoon Entertainment"],
-      "게임사": ["Krafton", "Netmarble", "NCSoft", "Nexon"],
-      "항공·기타": ["Korean Air", "Asiana Airlines", "Doosan", "CJ CheilJedang", "Lotte", "HYBE", "Amorepacific"]
+      "삼성전자": [
+        "Samsung Electronics",
+        "Samsung Semiconductor",
+        "Samsung Austin Semiconductor"
+      ],
+      "삼성디스플레이": [
+        "Samsung Display"
+      ],
+      "삼성SDI": [
+        "Samsung SDI"
+      ],
+      "삼성바이오로직스": [
+        "Samsung Bioepis",
+        "Samsung Biologics"
+      ],
+      "SK하이닉스": [
+        "SK hynix",
+        "SK Hynix"
+      ],
+      "SK온·SK이노베이션": [
+        "SK On",
+        "SK Innovation",
+        "SK Battery America"
+      ],
+      "LG전자": [
+        "LG Electronics"
+      ],
+      "LG에너지솔루션": [
+        "LG Energy Solution",
+        "LG Chem"
+      ],
+      "LG디스플레이": [
+        "LG Display"
+      ],
+      "현대차그룹": [
+        "Hyundai Motor",
+        "Hyundai Motor America",
+        "Kia America",
+        "Kia Corporation",
+        "Hyundai Mobis",
+        "Hyundai Capital America"
+      ],
+      "HD현대·한화": [
+        "HD Hyundai",
+        "Hanwha",
+        "Hanwha Q Cells",
+        "Hanwha Ocean"
+      ],
+      "포스코": [
+        "POSCO"
+      ],
+      "셀트리온": [
+        "Celltrion"
+      ],
+      "쿠팡": [
+        "Coupang"
+      ],
+      "네이버·카카오": [
+        "NAVER Corporation",
+        "Kakao Corp",
+        "Webtoon Entertainment"
+      ],
+      "게임사": [
+        "Krafton",
+        "Netmarble",
+        "NCSoft",
+        "Nexon"
+      ],
+      "항공·기타": [
+        "Korean Air",
+        "Asiana Airlines",
+        "Doosan",
+        "CJ CheilJedang",
+        "Lotte",
+        "HYBE",
+        "Amorepacific"
+      ]
     },
     "글로벌 반도체": {
-      "TSMC": ["Taiwan Semiconductor Manufacturing", "TSMC"],
-      "인텔": ["Intel Corporation", "Intel Corp"],
-      "엔비디아": ["NVIDIA", "Nvidia Corporation"],
-      "AMD": ["Advanced Micro Devices"],
-      "퀄컴": ["Qualcomm"],
-      "브로드컴": ["Broadcom"],
-      "마이크론": ["Micron Technology"],
-      "텍사스인스트루먼트": ["Texas Instruments"],
-      "어플라이드머티어리얼즈": ["Applied Materials"],
-      "램리서치": ["Lam Research"],
-      "KLA": ["KLA Corporation", "KLA-Tencor"],
-      "ASML": ["ASML"],
-      "도쿄일렉트론": ["Tokyo Electron"],
-      "글로벌파운드리스": ["GlobalFoundries"],
-      "NXP": ["NXP Semiconductors", "NXP USA"],
-      "인피니언": ["Infineon Technologies"],
-      "ST마이크로": ["STMicroelectronics"],
-      "르네사스": ["Renesas Electronics"],
-      "키옥시아·WD": ["Kioxia", "Western Digital", "SanDisk"],
-      "마벨": ["Marvell Technology", "Marvell Semiconductor"],
-      "미디어텍": ["MediaTek"],
-      "Arm": ["Arm Limited", "Arm Holdings", "ARM Ltd"],
-      "시놉시스·케이던스": ["Synopsys", "Cadence Design Systems"],
-      "SMIC": ["Semiconductor Manufacturing International"],
-      "아날로그디바이스": ["Analog Devices"],
-      "마이크로칩": ["Microchip Technology"],
-      "온세미": ["ON Semiconductor", "onsemi", "Semiconductor Components Industries"],
-      "울프스피드": ["Wolfspeed", "Cree"],
-      "앰코": ["Amkor Technology"],
-      "YMTC·CXMT": ["Yangtze Memory", "ChangXin Memory"]
+      "TSMC": [
+        "Taiwan Semiconductor Manufacturing",
+        "TSMC"
+      ],
+      "인텔": [
+        "Intel Corporation",
+        "Intel Corp"
+      ],
+      "엔비디아": [
+        "NVIDIA",
+        "Nvidia Corporation"
+      ],
+      "AMD": [
+        "Advanced Micro Devices"
+      ],
+      "퀄컴": [
+        "Qualcomm"
+      ],
+      "브로드컴": [
+        "Broadcom"
+      ],
+      "마이크론": [
+        "Micron Technology"
+      ],
+      "텍사스인스트루먼트": [
+        "Texas Instruments"
+      ],
+      "어플라이드머티어리얼즈": [
+        "Applied Materials"
+      ],
+      "램리서치": [
+        "Lam Research"
+      ],
+      "KLA": [
+        "KLA Corporation",
+        "KLA-Tencor"
+      ],
+      "ASML": [
+        "ASML"
+      ],
+      "도쿄일렉트론": [
+        "Tokyo Electron"
+      ],
+      "글로벌파운드리스": [
+        "GlobalFoundries"
+      ],
+      "NXP": [
+        "NXP Semiconductors",
+        "NXP USA"
+      ],
+      "인피니언": [
+        "Infineon Technologies"
+      ],
+      "ST마이크로": [
+        "STMicroelectronics"
+      ],
+      "르네사스": [
+        "Renesas Electronics"
+      ],
+      "키옥시아·WD": [
+        "Kioxia",
+        "Western Digital",
+        "SanDisk"
+      ],
+      "마벨": [
+        "Marvell Technology",
+        "Marvell Semiconductor"
+      ],
+      "미디어텍": [
+        "MediaTek"
+      ],
+      "Arm": [
+        "Arm Limited",
+        "Arm Holdings",
+        "ARM Ltd"
+      ],
+      "시놉시스·케이던스": [
+        "Synopsys",
+        "Cadence Design Systems"
+      ],
+      "SMIC": [
+        "Semiconductor Manufacturing International"
+      ],
+      "아날로그디바이스": [
+        "Analog Devices"
+      ],
+      "마이크로칩": [
+        "Microchip Technology"
+      ],
+      "온세미": [
+        "ON Semiconductor",
+        "onsemi",
+        "Semiconductor Components Industries"
+      ],
+      "울프스피드": [
+        "Wolfspeed",
+        "Cree, Inc."
+      ],
+      "앰코": [
+        "Amkor Technology"
+      ],
+      "YMTC·CXMT": [
+        "Yangtze Memory",
+        "ChangXin Memory"
+      ]
     }
   }
 }
