@@ -3,7 +3,12 @@ on:
   schedule:
     - cron: "37 22 * * *"   # KST 07:37 (미국 동부 전날 업무 마감 직후)
     - cron: "7 5 * * *"     # KST 14:07 (미국 동부 자정 무렵, 늦은 접수·반영 지연분)
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      telegram_test:
+        description: "텔레그램 시험 메시지 먼저 보내기"
+        type: boolean
+        default: false
 permissions:
   contents: write
 concurrency: monitor
@@ -25,7 +30,9 @@ jobs:
           SMTP_USER: ${{ secrets.SMTP_USER }}
           SMTP_PASS: ${{ secrets.SMTP_PASS }}
           MAIL_TO: ${{ secrets.MAIL_TO }}
-        run: python monitor.py
+        run: |
+          if [ "${{ inputs.telegram_test }}" = "true" ]; then python monitor.py --telegram-test; fi
+          python monitor.py
       - name: Save state
         run: |
           git config user.name "cl-monitor"
