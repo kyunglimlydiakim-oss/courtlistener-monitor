@@ -210,6 +210,8 @@ def main():
         print(chats or "메시지가 없다. 봇에게 먼저 아무 메시지나 보내라.")
         return
     if args.telegram_test:
+        if not (os.getenv("TELEGRAM_BOT_TOKEN") and os.getenv("TELEGRAM_CHAT_ID")):
+            sys.exit("[오류] TELEGRAM_BOT_TOKEN 또는 TELEGRAM_CHAT_ID가 비어 있다")
         notify([{"company": "테스트", "caseName": "Test v. Monitor", "court_id": "test",
                  "dateFiled": "-", "nos": "", "url": BASE}], "test")
         print("발송 완료")
