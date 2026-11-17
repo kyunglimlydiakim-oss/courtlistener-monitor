@@ -305,10 +305,17 @@ def main():
     if aborted:
         print(f"[중단] {aborted}. 이번 결과까지만 저장한다.", file=sys.stderr)
     print(f"조회 기준일 {since:%Y-%m-%d}, 신규 {len(new_cases)}건")
+    if not new_cases:
+        (REPORT_DIR / "latest_new.json").write_text(
+            json.dumps({"generated": now.isoformat(), "report": None, "cases": []}), encoding="utf-8")
     if new_cases:
         report = render_report(new_cases, since, now)
         rp = REPORT_DIR / f"{now:%Y%m%d_%H%M}.md"
         rp.write_text(report, encoding="utf-8")
+        # 한국 보도 여부 대조 단계(예약 실행의 Claude)가 읽는 파일
+        (REPORT_DIR / "latest_new.json").write_text(
+            json.dumps({"generated": now.isoformat(), "report": rp.name, "cases": new_cases},
+                       ensure_ascii=False, indent=1), encoding="utf-8")
         print(f"보고서: {rp}")
         new_file = not LOG_CSV.exists()
         with LOG_CSV.open("a", newline="", encoding="utf-8-sig") as f:
