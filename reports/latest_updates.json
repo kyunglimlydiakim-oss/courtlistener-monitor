@@ -1,18 +1,31 @@
 {
- "generated": "2026-11-17T04:38:21.050877+00:00",
+ "generated": "2026-11-17T21:02:38.910297+00:00",
  "updates": [
   {
-   "docket_id": 75112676,
-   "company": "현대차그룹",
-   "caseName": "Sears v. Hyundai Motor America",
+   "docket_id": 75086371,
+   "company": "LG전자",
+   "caseName": "Solomon v. LG Electronics USA, Inc.",
    "court_id": "",
-   "entry_date": "2026-11-16",
-   "entry_number": 4,
-   "description": "Initial Case Management Scheduling Order with ADR Deadlines",
-   "short": "Initial Case Management Scheduling Order with ADR Deadlines",
+   "entry_date": "2026-11-17",
+   "entry_number": null,
+   "description": "A Docket Text Order",
+   "short": "A Docket Text Order",
    "level": "일상",
    "pdf": false,
-   "url": "https://www.courtlistener.com/docket/75112676/4/sears-v-hyundai-motor-america/"
+   "url": "https://www.courtlistener.com/docket/75086371/solomon-v-lg-electronics-usa-inc/"
+  },
+  {
+   "docket_id": 75106364,
+   "company": "엔비디아",
+   "caseName": "Vanegas v. Huang",
+   "court_id": "",
+   "entry_date": "2026-11-17",
+   "entry_number": null,
+   "description": "Clerk's Notice",
+   "short": "Clerk's Notice",
+   "level": "일상",
+   "pdf": false,
+   "url": "https://www.courtlistener.com/docket/75106364/vanegas-v-huang/"
   }
  ]
 }
