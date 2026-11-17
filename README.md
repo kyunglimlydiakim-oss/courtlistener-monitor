@@ -1,6 +1,6 @@
 # CourtListener 소송 모니터
 
-한국 기업·글로벌 반도체 기업이 당사자로 오른 **미국 연방법원 신규 사건**을 CourtListener에서 매일 오전 6시(KST) Claude 예약 작업이 확인하고 Gmail로 알린다. GitHub Actions는 수동 실행용 예비 수단이다.
+한국 기업·글로벌 반도체 기업이 당사자로 오른 **미국 연방법원 신규 사건**을 CourtListener에서 매일 오전 6시·오후 2시(KST) Claude 예약 작업이 확인하고 Gmail로 알린다. GitHub Actions는 수동 실행용 예비 수단이다.
 
 ## 구성
 - `watchlist.json` 감시 기업과 영문 법인명. 자유롭게 추가·삭제한다.
