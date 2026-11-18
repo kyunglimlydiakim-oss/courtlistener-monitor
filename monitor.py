@@ -120,10 +120,61 @@ ROUTINE_PATTERNS = {
 }
 
 
-def routine_tag(case_name):
+# 개인 원고 판별: 원고 쪽에 이런 단어가 있으면 법인·기관으로 본다
+ORG_MARKERS = [
+    " inc", " llc", " l.l.c", " corp", " co.", " co,", " company", " ltd", " limited", " l.p", " lp",
+    " llp", " plc", " gmbh", " ag", " s.a", " holdings", " group", " technologies", " technology",
+    " systems", " system", " fund", " trust", " association", " union", " partners", " capital",
+    " bank", " insurance", " assurance", " mutual", "city of", "county", "state of", "people of",
+    "united states", "commonwealth", "department", "authority", "district", "board of", "university",
+    "in re", "in the matter", " foundation", " institute", " society", " council", " retirement",
+    " pension", " plan", " semiconductor", " electronics", " motor", " display", " energy",
+]
+# 개인 소송으로 묶는 사건 유형(Nature of Suit 코드)
+INDIVIDUAL_NOS = {"110": "보험", "190": "계약", "195": "계약(제조물)", "350": "자동차", "355": "자동차 제조물책임",
+                  "360": "상해", "362": "의료상해", "365": "제조물책임", "367": "제조물책임(의약)",
+                  "368": "석면", "385": "재산피해(제조물)"}
+# 집단·대표 소송 신호가 있으면 묶지 않는다
+CLASS_SIGNALS = ["class", "derivative", "on behalf of", "securities", "antitrust", "consolidated", "mdl"]
+
+
+def _plaintiff(case_name):
+    name = (case_name or "")
+    for sep in (" v. ", " vs. ", " v ", " vs "):
+        if sep in name:
+            return name.split(sep, 1)[0]
+    return ""
+
+
+def is_individual(plaintiff):
+    p = " " + plaintiff.lower().replace(",", " ,").strip() + " "
+    if not plaintiff.strip():
+        return False
+    return not any(m in p for m in ORG_MARKERS)
+
+
+def routine_tag(case_name, suit_nature="", cause=""):
     for pat, label in ROUTINE_PATTERNS.items():
         if pat.lower() in (case_name or "").lower():
             return label
+    text = f"{case_name} {cause}".lower()
+    if any(k in text for k in CLASS_SIGNALS):
+        return ""
+    plaintiff = _plaintiff(case_name)
+    if not plaintiff:
+        return ""
+    code = (suit_nature or "").strip()[:3]
+    if " insurance" in " " + plaintiff.lower() and (not code or code in INDIVIDUAL_NOS):
+        return "보험사 대위 소송 추정"
+    if not is_individual(plaintiff):
+        return ""
+    if code in INDIVIDUAL_NOS:
+        return f"개인 {INDIVIDUAL_NOS[code]} 소송"
+    if not code:
+        # 유형 미기재: 피고가 미국 판매법인(America/USA)인 개인 소송만 묶는다
+        defendant = (case_name or "").split(" v", 1)[-1].lower()
+        if any(k in defendant for k in (" america", " usa", " u.s.a", " u.s.")):
+            return "개인 소송 추정(유형 미기재)"
     return ""
 
 
@@ -170,8 +221,11 @@ def classify_entry(text):
 
 
 def follow_add_from_cases(follow, new_cases, now):
+    schedule_a = set(ROUTINE_PATTERNS.values())
     for c in new_cases:
-        if c.get("routine"):
+        # 위조품 일괄소송만 추적에서 뺀다. 개인 소송으로 묶인 사건도 추적한다
+        # (후속 기록에서 집단소송 등 주요 신호가 나오면 다시 올라오도록)
+        if c.get("routine") in schedule_a:
             continue
         did = c["url"].rstrip("/").split("/docket/")[-1].split("/")[0]
         follow.setdefault(did, {
@@ -431,7 +485,7 @@ def main():
                 "judge": r.get("assignedTo") or "",
                 "hits": list(dict.fromkeys(a for a, _, _ in hits)),
                 "url": BASE + (r.get("docket_absolute_url") or ""),
-                "routine": routine_tag(r.get("caseName")),
+                "routine": routine_tag(r.get("caseName"), r.get("suitNature"), r.get("cause")),
             })
         time.sleep(1)
 
