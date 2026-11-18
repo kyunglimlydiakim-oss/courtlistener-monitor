@@ -1,22 +1,41 @@
 {
- "generated": "2026-11-18T04:38:28.413943+00:00",
- "report": "20261118_0438.md",
+ "generated": "2026-11-18T21:05:37.074742+00:00",
+ "report": "20261118_2105.md",
  "cases": [
   {
    "group": "한국 기업",
-   "company": "삼성전자",
-   "caseName": "Forrett v. Samsung Electronics America, Inc.",
-   "dateFiled": "2026-11-17",
-   "court": "District Court, N.D. California",
-   "court_id": "cand",
-   "docketNumber": "5:26-cv-14024",
+   "company": "현대차그룹",
+   "caseName": "Scott Cooper as conservator for Nathan Ballenger v. Hyundai Motor America Corporation",
+   "dateFiled": "2026-11-18",
+   "court": "District Court, D. Colorado",
+   "court_id": "cod",
+   "docketNumber": "1:26-cv-06271",
    "nos": "",
    "cause": "",
    "judge": "",
    "hits": [
-    "Samsung Electronics"
+    "Hyundai Motor",
+    "Hyundai Motor America"
    ],
-   "url": "https://www.courtlistener.com/docket/75134364/forrett-v-samsung-electronics-america-inc/",
+   "url": "https://www.courtlistener.com/docket/75138890/scott-cooper-as-conservator-for-nathan-ballenger-v-hyundai-motor-america/",
+   "routine": ""
+  },
+  {
+   "group": "한국 기업",
+   "company": "현대차그룹",
+   "caseName": "Hunter-Brock v. Hyundai Motor America, Inc.",
+   "dateFiled": "2026-11-18",
+   "court": "District Court, C.D. California",
+   "court_id": "cacd",
+   "docketNumber": "8:26-cv-03416",
+   "nos": "",
+   "cause": "",
+   "judge": "",
+   "hits": [
+    "Hyundai Motor",
+    "Hyundai Motor America"
+   ],
+   "url": "https://www.courtlistener.com/docket/75138653/hunter-brock-v-hyundai-motor-america-inc/",
    "routine": ""
   }
  ]

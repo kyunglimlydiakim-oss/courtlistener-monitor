@@ -214,5 +214,23 @@
   "url": "https://www.courtlistener.com/docket/75134364/forrett-v-samsung-electronics-america-inc/",
   "added": "2026-11-18T04:38:28.413943+00:00",
   "pinned": false
+ },
+ "75138890": {
+  "caseName": "Scott Cooper as conservator for Nathan Ballenger v. Hyundai Motor America Corporation",
+  "company": "현대차그룹",
+  "court_id": "cod",
+  "dateFiled": "2026-11-18",
+  "url": "https://www.courtlistener.com/docket/75138890/scott-cooper-as-conservator-for-nathan-ballenger-v-hyundai-motor-america/",
+  "added": "2026-11-18T21:05:37.074742+00:00",
+  "pinned": false
+ },
+ "75138653": {
+  "caseName": "Hunter-Brock v. Hyundai Motor America, Inc.",
+  "company": "현대차그룹",
+  "court_id": "cacd",
+  "dateFiled": "2026-11-18",
+  "url": "https://www.courtlistener.com/docket/75138653/hunter-brock-v-hyundai-motor-america-inc/",
+  "added": "2026-11-18T21:05:37.074742+00:00",
+  "pinned": false
  }
 }
