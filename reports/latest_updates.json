@@ -1,6 +1,97 @@
 {
- "generated": "2026-11-17T21:02:38.910297+00:00",
+ "generated": "2026-11-18T04:38:28.413943+00:00",
  "updates": [
+  {
+   "docket_id": 75134364,
+   "company": "삼성전자",
+   "caseName": "Forrett v. Samsung Electronics America, Inc.",
+   "court_id": "cand",
+   "entry_date": "2026-11-17",
+   "entry_number": 2,
+   "description": "Proposed Summons",
+   "short": "Proposed Summons",
+   "level": "일상",
+   "pdf": false,
+   "url": "https://www.courtlistener.com/docket/75134364/2/forrett-v-samsung-electronics-america-inc/"
+  },
+  {
+   "docket_id": 75134364,
+   "company": "삼성전자",
+   "caseName": "Forrett v. Samsung Electronics America, Inc.",
+   "court_id": "cand",
+   "entry_date": "2026-11-17",
+   "entry_number": 3,
+   "description": "Certificate of Interested Entities, Corporate Disclosure Statement, or Rule 7.1 Disclosures",
+   "short": "Certificate of Interested Entities, Corporate Disclosure Statement, or Rule 7.1 Disclosures",
+   "level": "일상",
+   "pdf": false,
+   "url": "https://www.courtlistener.com/docket/75134364/3/forrett-v-samsung-electronics-america-inc/"
+  },
+  {
+   "docket_id": 75134364,
+   "company": "삼성전자",
+   "caseName": "Forrett v. Samsung Electronics America, Inc.",
+   "court_id": "cand",
+   "entry_date": "2026-11-17",
+   "entry_number": 1,
+   "description": "Complaint",
+   "short": "Complaint",
+   "level": "일상",
+   "pdf": false,
+   "url": "https://www.courtlistener.com/docket/75134364/1/forrett-v-samsung-electronics-america-inc/"
+  },
+  {
+   "docket_id": 75086371,
+   "company": "LG전자",
+   "caseName": "Solomon v. LG Electronics USA, Inc.",
+   "court_id": "",
+   "entry_date": "2026-11-17",
+   "entry_number": 19,
+   "description": "Extension of Time to File Answer",
+   "short": "Extension of Time to File Answer",
+   "level": "일상",
+   "pdf": false,
+   "url": "https://www.courtlistener.com/docket/75086371/19/solomon-v-lg-electronics-usa-inc/"
+  },
+  {
+   "docket_id": 75111235,
+   "company": "삼성디스플레이",
+   "caseName": "Prevalent Display LLC v. Samsung Display Co., Ltd.",
+   "court_id": "",
+   "entry_date": "2026-11-17",
+   "entry_number": 5,
+   "description": "Summons Returned Executed",
+   "short": "Summons Returned Executed",
+   "level": "일상",
+   "pdf": false,
+   "url": "https://www.courtlistener.com/docket/75111235/5/prevalent-display-llc-v-samsung-display-co-ltd/"
+  },
+  {
+   "docket_id": 75111235,
+   "company": "삼성디스플레이",
+   "caseName": "Prevalent Display LLC v. Samsung Display Co., Ltd.",
+   "court_id": "",
+   "entry_date": "2026-11-17",
+   "entry_number": 6,
+   "description": "Summons Returned Executed",
+   "short": "Summons Returned Executed",
+   "level": "일상",
+   "pdf": false,
+   "url": "https://www.courtlistener.com/docket/75111235/6/prevalent-display-llc-v-samsung-display-co-ltd/"
+  },
+  {
+   "docket_id": 75111235,
+   "company": "삼성디스플레이",
+   "caseName": "Prevalent Display LLC v. Samsung Display Co., Ltd.",
+   "court_id": "",
+   "entry_date": "2026-11-17",
+   "entry_number": 7,
+   "description": "Summons Returned Executed",
+   "short": "Summons Returned Executed",
+   "level": "일상",
+   "pdf": false,
+   "url": "https://www.courtlistener.com/docket/75111235/7/prevalent-display-llc-v-samsung-display-co-ltd/"
+  },
   {
    "docket_id": 75086371,
    "company": "LG전자",
@@ -8,24 +99,11 @@
    "court_id": "",
    "entry_date": "2026-11-17",
    "entry_number": null,
-   "description": "A Docket Text Order",
-   "short": "A Docket Text Order",
+   "description": "A Docket Text Order with Schedules",
+   "short": "A Docket Text Order with Schedules",
    "level": "일상",
    "pdf": false,
    "url": "https://www.courtlistener.com/docket/75086371/solomon-v-lg-electronics-usa-inc/"
-  },
-  {
-   "docket_id": 75106364,
-   "company": "엔비디아",
-   "caseName": "Vanegas v. Huang",
-   "court_id": "",
-   "entry_date": "2026-11-17",
-   "entry_number": null,
-   "description": "Clerk's Notice",
-   "short": "Clerk's Notice",
-   "level": "일상",
-   "pdf": false,
-   "url": "https://www.courtlistener.com/docket/75106364/vanegas-v-huang/"
   }
  ]
 }

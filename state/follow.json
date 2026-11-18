@@ -205,5 +205,14 @@
   "url": "https://www.courtlistener.com/docket/75108796/navitas-semiconductor-ireland-llc-v-renesas-electronics-coporation/",
   "added": "2026-11-17T02:01:03.817896+00:00",
   "pinned": false
+ },
+ "75134364": {
+  "caseName": "Forrett v. Samsung Electronics America, Inc.",
+  "company": "삼성전자",
+  "court_id": "cand",
+  "dateFiled": "2026-11-17",
+  "url": "https://www.courtlistener.com/docket/75134364/forrett-v-samsung-electronics-america-inc/",
+  "added": "2026-11-18T04:38:28.413943+00:00",
+  "pinned": false
  }
 }

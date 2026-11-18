@@ -1,1 +1,23 @@
-{"generated": "2026-11-17T21:02:38.910297+00:00", "report": null, "cases": []}
+{
+ "generated": "2026-11-18T04:38:28.413943+00:00",
+ "report": "20261118_0438.md",
+ "cases": [
+  {
+   "group": "한국 기업",
+   "company": "삼성전자",
+   "caseName": "Forrett v. Samsung Electronics America, Inc.",
+   "dateFiled": "2026-11-17",
+   "court": "District Court, N.D. California",
+   "court_id": "cand",
+   "docketNumber": "5:26-cv-14024",
+   "nos": "",
+   "cause": "",
+   "judge": "",
+   "hits": [
+    "Samsung Electronics"
+   ],
+   "url": "https://www.courtlistener.com/docket/75134364/forrett-v-samsung-electronics-america-inc/",
+   "routine": ""
+  }
+ ]
+}
