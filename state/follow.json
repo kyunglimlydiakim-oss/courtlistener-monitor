@@ -232,5 +232,41 @@
   "url": "https://www.courtlistener.com/docket/75138653/hunter-brock-v-hyundai-motor-america-inc/",
   "added": "2026-11-18T21:05:37.074742+00:00",
   "pinned": false
+ },
+ "75141558": {
+  "caseName": "Scott Cooper as conservator for Nathan Ballenger v. Hyundai Motor America Corporation",
+  "company": "현대차그룹",
+  "court_id": "cod",
+  "dateFiled": "2026-11-18",
+  "url": "https://www.courtlistener.com/docket/75141558/scott-cooper-as-conservator-for-nathan-ballenger-v-hyundai-motor-america/",
+  "added": "2026-11-19T04:38:12.148123+00:00",
+  "pinned": false
+ },
+ "75139930": {
+  "caseName": "Liu v. Kia America, Inc.",
+  "company": "현대차그룹",
+  "court_id": "vawd",
+  "dateFiled": "2026-11-18",
+  "url": "https://www.courtlistener.com/docket/75139930/liu-v-kia-america-inc/",
+  "added": "2026-11-19T04:38:12.148123+00:00",
+  "pinned": false
+ },
+ "75141605": {
+  "caseName": "Schnipper v. Huang",
+  "company": "엔비디아",
+  "court_id": "cand",
+  "dateFiled": "2026-11-18",
+  "url": "https://www.courtlistener.com/docket/75141605/schnipper-v-huang/",
+  "added": "2026-11-19T04:38:12.148123+00:00",
+  "pinned": false
+ },
+ "75141023": {
+  "caseName": "Lee v. NVIDIA Corporation",
+  "company": "엔비디아",
+  "court_id": "cand",
+  "dateFiled": "2026-11-18",
+  "url": "https://www.courtlistener.com/docket/75141023/lee-v-nvidia-corporation/",
+  "added": "2026-11-19T04:38:12.148123+00:00",
+  "pinned": false
  }
 }
