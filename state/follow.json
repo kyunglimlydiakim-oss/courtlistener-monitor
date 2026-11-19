@@ -268,5 +268,23 @@
   "url": "https://www.courtlistener.com/docket/75141023/lee-v-nvidia-corporation/",
   "added": "2026-11-19T04:38:12.148123+00:00",
   "pinned": false
+ },
+ "75144074": {
+  "caseName": "Scott Cooper as conservator for Nathan Ballenger v. Hyundai Motor America Corporation",
+  "company": "현대차그룹",
+  "court_id": "cod",
+  "dateFiled": "2026-11-19",
+  "url": "https://www.courtlistener.com/docket/75144074/scott-cooper-as-conservator-for-nathan-ballenger-v-hyundai-motor-america/",
+  "added": "2026-11-19T21:05:55.353307+00:00",
+  "pinned": false
+ },
+ "75142144": {
+  "caseName": "Beltran v. NVIDIA Corporation",
+  "company": "엔비디아",
+  "court_id": "cand",
+  "dateFiled": "2026-11-18",
+  "url": "https://www.courtlistener.com/docket/75142144/beltran-v-nvidia-corporation/",
+  "added": "2026-11-19T21:05:55.353307+00:00",
+  "pinned": false
  }
 }

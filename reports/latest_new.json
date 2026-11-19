@@ -1,15 +1,15 @@
 {
- "generated": "2026-11-19T04:38:12.148123+00:00",
- "report": "20261119_0438.md",
+ "generated": "2026-11-19T21:05:55.353307+00:00",
+ "report": "20261119_2105.md",
  "cases": [
   {
    "group": "한국 기업",
    "company": "현대차그룹",
    "caseName": "Scott Cooper as conservator for Nathan Ballenger v. Hyundai Motor America Corporation",
-   "dateFiled": "2026-11-18",
+   "dateFiled": "2026-11-19",
    "court": "District Court, D. Colorado",
    "court_id": "cod",
-   "docketNumber": "1:26-cv-06296",
+   "docketNumber": "1:26-cv-06305",
    "nos": "",
    "cause": "",
    "judge": "",
@@ -17,60 +17,25 @@
     "Hyundai Motor",
     "Hyundai Motor America"
    ],
-   "url": "https://www.courtlistener.com/docket/75141558/scott-cooper-as-conservator-for-nathan-ballenger-v-hyundai-motor-america/",
-   "routine": "개인 소송 추정(유형 미기재)"
-  },
-  {
-   "group": "한국 기업",
-   "company": "현대차그룹",
-   "caseName": "Liu v. Kia America, Inc.",
-   "dateFiled": "2026-11-18",
-   "court": "District Court, W.D. Virginia",
-   "court_id": "vawd",
-   "docketNumber": "6:26-cv-00151",
-   "nos": "",
-   "cause": "",
-   "judge": "Norman K. Moon",
-   "hits": [
-    "Kia America"
-   ],
-   "url": "https://www.courtlistener.com/docket/75139930/liu-v-kia-america-inc/",
+   "url": "https://www.courtlistener.com/docket/75144074/scott-cooper-as-conservator-for-nathan-ballenger-v-hyundai-motor-america/",
    "routine": "개인 소송 추정(유형 미기재)"
   },
   {
    "group": "글로벌 반도체",
    "company": "엔비디아",
-   "caseName": "Schnipper v. Huang",
+   "caseName": "Beltran v. NVIDIA Corporation",
    "dateFiled": "2026-11-18",
    "court": "District Court, N.D. California",
    "court_id": "cand",
-   "docketNumber": "3:26-cv-14131",
-   "nos": "증권",
-   "cause": "15:78m(a) Securities Exchange Act",
+   "docketNumber": "3:26-cv-14135",
+   "nos": "사기",
+   "cause": "28:1332 Diversity-Fraud",
    "judge": "",
    "hits": [
     "NVIDIA",
     "Nvidia Corporation"
    ],
-   "url": "https://www.courtlistener.com/docket/75141605/schnipper-v-huang/",
-   "routine": ""
-  },
-  {
-   "group": "글로벌 반도체",
-   "company": "엔비디아",
-   "caseName": "Lee v. NVIDIA Corporation",
-   "dateFiled": "2026-11-18",
-   "court": "District Court, N.D. California",
-   "court_id": "cand",
-   "docketNumber": "3:26-cv-14120",
-   "nos": "증권",
-   "cause": "15:78m(a) Securities Exchange Act",
-   "judge": "",
-   "hits": [
-    "NVIDIA",
-    "Nvidia Corporation"
-   ],
-   "url": "https://www.courtlistener.com/docket/75141023/lee-v-nvidia-corporation/",
+   "url": "https://www.courtlistener.com/docket/75142144/beltran-v-nvidia-corporation/",
    "routine": ""
   }
  ]
