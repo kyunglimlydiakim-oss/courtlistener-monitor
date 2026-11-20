@@ -1,42 +1,92 @@
 {
- "generated": "2026-11-20T04:37:39.556950+00:00",
- "report": "20261120_0437.md",
+ "generated": "2026-11-20T21:05:27.548456+00:00",
+ "report": "20261120_2105.md",
  "cases": [
   {
    "group": "한국 기업",
-   "company": "현대차그룹",
-   "caseName": "Scott Cooper v. Scott Cooper as conservator for Nathan Ballenger",
-   "dateFiled": "2026-11-19",
-   "court": "District Court, D. Colorado",
-   "court_id": "cod",
-   "docketNumber": "1:26-cv-06304",
-   "nos": "355 Motor Vehicle Prod. Liability",
-   "cause": "28:1332 Diversity-Motor Vehicle Product Liability",
+   "company": "네이버·카카오",
+   "caseName": "isoValent LLC v. NAVER Corporation",
+   "dateFiled": "2026-11-20",
+   "court": "District Court, E.D. Texas",
+   "court_id": "txed",
+   "docketNumber": "2:26-cv-01050",
+   "nos": "",
+   "cause": "",
    "judge": "",
    "hits": [
-    "Hyundai Motor",
-    "Hyundai Motor America"
+    "NAVER Corporation"
    ],
-   "url": "https://www.courtlistener.com/docket/75143399/scott-cooper-v-scott-cooper-as-conservator-for-nathan-ballenger/",
-   "routine": "개인 자동차 제조물책임 소송"
+   "url": "https://www.courtlistener.com/docket/75151753/isovalent-llc-v-naver-corporation/",
+   "routine": ""
   },
   {
    "group": "한국 기업",
-   "company": "현대차그룹",
-   "caseName": "Scott Cooper v. Scott Cooper as conservator for Nathan Ballenger",
-   "dateFiled": "2026-11-18",
-   "court": "District Court, D. Colorado",
-   "court_id": "cod",
-   "docketNumber": "1:26-cv-06294",
-   "nos": "355 Motor Vehicle Prod. Liability",
-   "cause": "28:1332 Diversity-Motor Vehicle Product Liability",
+   "company": "삼성전자",
+   "caseName": "Kravchuck v. Samsung Electronics America, Inc.",
+   "dateFiled": "2026-11-19",
+   "court": "District Court, M.D. Florida",
+   "court_id": "flmd",
+   "docketNumber": "6:26-cv-02716",
+   "nos": "",
+   "cause": "",
    "judge": "",
    "hits": [
-    "Hyundai Motor",
-    "Hyundai Motor America"
+    "Samsung Electronics"
    ],
-   "url": "https://www.courtlistener.com/docket/75141476/scott-cooper-v-scott-cooper-as-conservator-for-nathan-ballenger/",
-   "routine": "개인 자동차 제조물책임 소송"
+   "url": "https://www.courtlistener.com/docket/75149012/kravchuck-v-samsung-electronics-america-inc/",
+   "routine": "개인 소송 추정(유형 미기재)"
+  },
+  {
+   "group": "한국 기업",
+   "company": "삼성전자",
+   "caseName": "Matthews v. 2020 Companies, Inc.",
+   "dateFiled": "2026-11-19",
+   "court": "District Court, E.D. New York",
+   "court_id": "nyed",
+   "docketNumber": "1:26-cv-07483",
+   "nos": "고용차별",
+   "cause": "42:2000e Job Discrimination (Employment)",
+   "judge": "",
+   "hits": [
+    "Samsung Electronics"
+   ],
+   "url": "https://www.courtlistener.com/docket/75146335/matthews-v-2020-companies-inc/",
+   "routine": ""
+  },
+  {
+   "group": "한국 기업",
+   "company": "네이버·카카오",
+   "caseName": "isoValent LLC v. Kakao Corp.",
+   "dateFiled": "2026-11-20",
+   "court": "District Court, E.D. Texas",
+   "court_id": "txed",
+   "docketNumber": "2:26-cv-01049",
+   "nos": "",
+   "cause": "",
+   "judge": "",
+   "hits": [
+    "Kakao Corp"
+   ],
+   "url": "https://www.courtlistener.com/docket/75150754/isovalent-llc-v-kakao-corp/",
+   "routine": ""
+  },
+  {
+   "group": "글로벌 반도체",
+   "company": "인텔",
+   "caseName": "Tran v. Intel Corporation",
+   "dateFiled": "2026-11-20",
+   "court": "District Court, N.D. California",
+   "court_id": "cand",
+   "docketNumber": "5:26-cv-14267",
+   "nos": "주주소송",
+   "cause": "12:22 Securities Fraud",
+   "judge": "",
+   "hits": [
+    "Intel Corporation",
+    "Intel Corp"
+   ],
+   "url": "https://www.courtlistener.com/docket/75149786/tran-v-intel-corporation/",
+   "routine": ""
   }
  ]
 }
