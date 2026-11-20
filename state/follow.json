@@ -286,5 +286,23 @@
   "url": "https://www.courtlistener.com/docket/75142144/beltran-v-nvidia-corporation/",
   "added": "2026-11-19T21:05:55.353307+00:00",
   "pinned": false
+ },
+ "75143399": {
+  "caseName": "Scott Cooper v. Scott Cooper as conservator for Nathan Ballenger",
+  "company": "현대차그룹",
+  "court_id": "cod",
+  "dateFiled": "2026-11-19",
+  "url": "https://www.courtlistener.com/docket/75143399/scott-cooper-v-scott-cooper-as-conservator-for-nathan-ballenger/",
+  "added": "2026-11-20T04:37:39.556950+00:00",
+  "pinned": false
+ },
+ "75141476": {
+  "caseName": "Scott Cooper v. Scott Cooper as conservator for Nathan Ballenger",
+  "company": "현대차그룹",
+  "court_id": "cod",
+  "dateFiled": "2026-11-18",
+  "url": "https://www.courtlistener.com/docket/75141476/scott-cooper-v-scott-cooper-as-conservator-for-nathan-ballenger/",
+  "added": "2026-11-20T04:37:39.556950+00:00",
+  "pinned": false
  }
 }
