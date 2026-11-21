@@ -349,5 +349,14 @@
   "url": "https://www.courtlistener.com/docket/75149786/tran-v-intel-corporation/",
   "added": "2026-11-20T21:05:27.548456+00:00",
   "pinned": false
+ },
+ "75155849": {
+  "caseName": "Vierra v. Hyundai Motor America",
+  "company": "현대차그룹",
+  "court_id": "cand",
+  "dateFiled": "2026-11-20",
+  "url": "https://www.courtlistener.com/docket/75155849/vierra-v-hyundai-motor-america/",
+  "added": "2026-11-21T04:38:17.116725+00:00",
+  "pinned": false
  }
 }
