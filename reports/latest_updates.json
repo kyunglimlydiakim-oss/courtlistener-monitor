@@ -1,4 +1,96 @@
 {
- "generated": "2026-11-23T04:38:02.206727+00:00",
- "updates": []
+ "generated": "2026-11-23T21:05:55.137606+00:00",
+ "updates": [
+  {
+   "docket_id": 75104089,
+   "company": "LG에너지솔루션",
+   "caseName": "Doe v. LG ENERGY SOLUTION- HONDA BATTERY PLANT d/b/a L-H BATTERY COMPANY, INC.",
+   "court_id": "",
+   "entry_date": "2026-11-23",
+   "entry_number": 2,
+   "description": "Order",
+   "short": "Order",
+   "level": "일상",
+   "pdf": false,
+   "url": "https://www.courtlistener.com/docket/75104089/2/doe-v-lg-energy-solution-honda-battery-plant-dba-l-h-battery-company/"
+  },
+  {
+   "docket_id": 75141605,
+   "company": "엔비디아",
+   "caseName": "Schnipper v. Huang",
+   "court_id": "cand",
+   "entry_date": "2026-11-23",
+   "entry_number": 5,
+   "description": "Initial Case Management Scheduling Order with ADR Deadlines",
+   "short": "Initial Case Management Scheduling Order with ADR Deadlines",
+   "level": "일상",
+   "pdf": false,
+   "url": "https://www.courtlistener.com/docket/75141605/5/schnipper-v-huang/"
+  },
+  {
+   "docket_id": 75149786,
+   "company": "인텔",
+   "caseName": "Tran v. Intel Corporation",
+   "court_id": "cand",
+   "entry_date": "2026-11-23",
+   "entry_number": 4,
+   "description": "Summons Issued",
+   "short": "Summons Issued",
+   "level": "일상",
+   "pdf": false,
+   "url": "https://www.courtlistener.com/docket/75149786/4/tran-v-intel-corporation/"
+  },
+  {
+   "docket_id": 75149786,
+   "company": "인텔",
+   "caseName": "Tran v. Intel Corporation",
+   "court_id": "cand",
+   "entry_date": "2026-11-23",
+   "entry_number": 5,
+   "description": "Initial Case Management Scheduling Order with ADR Deadlines",
+   "short": "Initial Case Management Scheduling Order with ADR Deadlines",
+   "level": "일상",
+   "pdf": false,
+   "url": "https://www.courtlistener.com/docket/75149786/5/tran-v-intel-corporation/"
+  },
+  {
+   "docket_id": 75149786,
+   "company": "인텔",
+   "caseName": "Tran v. Intel Corporation",
+   "court_id": "cand",
+   "entry_date": "2026-11-23",
+   "entry_number": null,
+   "description": "~Util - Case Assigned by Intake",
+   "short": "~Util - Case Assigned by Intake",
+   "level": "일상",
+   "pdf": false,
+   "url": "https://www.courtlistener.com/docket/75149786/tran-v-intel-corporation/"
+  },
+  {
+   "docket_id": 75099171,
+   "company": "현대차그룹",
+   "caseName": "GREENBERGER v. HYUNDAI MOTOR AMERICA",
+   "court_id": "",
+   "entry_date": "2026-11-23",
+   "entry_number": 4,
+   "description": "Affidavit of Service",
+   "short": "Affidavit of Service",
+   "level": "일상",
+   "pdf": false,
+   "url": "https://www.courtlistener.com/docket/75099171/4/greenberger-v-hyundai-motor-america/"
+  },
+  {
+   "docket_id": 75092150,
+   "company": "엔비디아",
+   "caseName": "Kistenmacher v. NVIDIA Corporation",
+   "court_id": "",
+   "entry_date": "2026-11-23",
+   "entry_number": 9,
+   "description": "Judicial Referral for Purpose of Determining Relationship of Cases re 26-cv-14131-LJC. Signed by Judge Lisa J. Cisneros on 11/20/2026. (bns, COURT STAFF) (Filed on 11/23/2026) (Entered: 11/23/2026)",
+   "short": "Judicial Referral for Purpose of Determining Relationship of Cases",
+   "level": "일상",
+   "pdf": true,
+   "url": "https://www.courtlistener.com/docket/75092150/9/kistenmacher-v-nvidia-corporation/"
+  }
+ ]
 }
