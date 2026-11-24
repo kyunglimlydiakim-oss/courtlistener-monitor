@@ -205,7 +205,7 @@ MINOR_OVERRIDE = [
     "jury demand", "summons returned", "summons issued", "notice to all counsel", "standard procedures",
     "notice of appearance", "pro hac vice", "civil cover sheet", "disclosure statement",
     "corporate disclosure", "certificate of interested", "consent to proceed", "case assigned",
-    "case reassigned",
+    "case reassigned", "judge assignment letter", "notice to filer",
 ]
 
 

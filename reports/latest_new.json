@@ -1,56 +1,39 @@
 {
- "generated": "2026-11-24T04:38:12.694453+00:00",
- "report": "20261124_0438.md",
+ "generated": "2026-11-24T21:05:55.935404+00:00",
+ "report": "20261124_2105.md",
  "cases": [
   {
    "group": "한국 기업",
-   "company": "LG에너지솔루션",
-   "caseName": "LG ENERGY SOLUTION, LTD v. SIGMA MINERAO S.A",
-   "dateFiled": "2026-11-23",
-   "court": "District Court, S.D. New York",
-   "court_id": "nysd",
-   "docketNumber": "1:26-mc-00600",
-   "nos": "",
-   "cause": "",
-   "judge": "",
-   "hits": [
-    "LG Energy Solution"
-   ],
-   "url": "https://www.courtlistener.com/docket/75162459/lg-energy-solution-ltd-v-sigma-minerao-sa/",
-   "routine": ""
-  },
-  {
-   "group": "한국 기업",
    "company": "삼성전자",
-   "caseName": "Mutual of Enumclaw Insurance Company v. Samsung Electronics America, Inc.",
+   "caseName": "Mutual of Enumclaw Insurance Company v. Samsung Electronics America Inc",
    "dateFiled": "2026-11-23",
    "court": "District Court, W.D. Washington",
    "court_id": "wawd",
-   "docketNumber": "2:26-cv-04609",
+   "docketNumber": "3:26-cv-06414",
    "nos": "",
    "cause": "",
-   "judge": "",
+   "judge": "Tiffany M. Cartwright",
    "hits": [
     "Samsung Electronics"
    ],
-   "url": "https://www.courtlistener.com/docket/75161702/mutual-of-enumclaw-insurance-company-v-samsung-electronics-america-inc/",
+   "url": "https://www.courtlistener.com/docket/75167932/mutual-of-enumclaw-insurance-company-v-samsung-electronics-america-inc/",
    "routine": "보험사 대위 소송 추정"
   },
   {
-   "group": "한국 기업",
-   "company": "네이버·카카오",
-   "caseName": "WEBTOON Entertainment Inc. v. DMCA Subpoena to Cloudflare, Inc.",
-   "dateFiled": "2026-11-23",
-   "court": "District Court, N.D. California",
-   "court_id": "cand",
-   "docketNumber": "3:26-mc-80359",
+   "group": "글로벌 반도체",
+   "company": "르네사스",
+   "caseName": "Navitas Semiconductor USA, Inc. v. Renesas Electronics Coporation",
+   "dateFiled": "2026-11-24",
+   "court": "District Court, E.D. Texas",
+   "court_id": "txed",
+   "docketNumber": "2:26-cv-01056",
    "nos": "",
    "cause": "",
-   "judge": "",
+   "judge": "James Rodney Gilstrap",
    "hits": [
-    "Webtoon Entertainment"
+    "Renesas Electronics"
    ],
-   "url": "https://www.courtlistener.com/docket/75164430/webtoon-entertainment-inc-v-dmca-subpoena-to-cloudflare-inc/",
+   "url": "https://www.courtlistener.com/docket/75167246/navitas-semiconductor-usa-inc-v-renesas-electronics-coporation/",
    "routine": ""
   }
  ]

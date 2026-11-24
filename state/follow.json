@@ -385,5 +385,23 @@
   "url": "https://www.courtlistener.com/docket/75164430/webtoon-entertainment-inc-v-dmca-subpoena-to-cloudflare-inc/",
   "added": "2026-11-24T04:38:12.694453+00:00",
   "pinned": false
+ },
+ "75167932": {
+  "caseName": "Mutual of Enumclaw Insurance Company v. Samsung Electronics America Inc",
+  "company": "삼성전자",
+  "court_id": "wawd",
+  "dateFiled": "2026-11-23",
+  "url": "https://www.courtlistener.com/docket/75167932/mutual-of-enumclaw-insurance-company-v-samsung-electronics-america-inc/",
+  "added": "2026-11-24T21:05:55.935404+00:00",
+  "pinned": false
+ },
+ "75167246": {
+  "caseName": "Navitas Semiconductor USA, Inc. v. Renesas Electronics Coporation",
+  "company": "르네사스",
+  "court_id": "txed",
+  "dateFiled": "2026-11-24",
+  "url": "https://www.courtlistener.com/docket/75167246/navitas-semiconductor-usa-inc-v-renesas-electronics-coporation/",
+  "added": "2026-11-24T21:05:55.935404+00:00",
+  "pinned": false
  }
 }
