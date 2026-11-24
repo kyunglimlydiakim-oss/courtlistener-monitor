@@ -358,5 +358,32 @@
   "url": "https://www.courtlistener.com/docket/75155849/vierra-v-hyundai-motor-america/",
   "added": "2026-11-21T04:38:17.116725+00:00",
   "pinned": false
+ },
+ "75162459": {
+  "caseName": "LG ENERGY SOLUTION, LTD v. SIGMA MINERAO S.A",
+  "company": "LG에너지솔루션",
+  "court_id": "nysd",
+  "dateFiled": "2026-11-23",
+  "url": "https://www.courtlistener.com/docket/75162459/lg-energy-solution-ltd-v-sigma-minerao-sa/",
+  "added": "2026-11-24T04:38:12.694453+00:00",
+  "pinned": false
+ },
+ "75161702": {
+  "caseName": "Mutual of Enumclaw Insurance Company v. Samsung Electronics America, Inc.",
+  "company": "삼성전자",
+  "court_id": "wawd",
+  "dateFiled": "2026-11-23",
+  "url": "https://www.courtlistener.com/docket/75161702/mutual-of-enumclaw-insurance-company-v-samsung-electronics-america-inc/",
+  "added": "2026-11-24T04:38:12.694453+00:00",
+  "pinned": false
+ },
+ "75164430": {
+  "caseName": "WEBTOON Entertainment Inc. v. DMCA Subpoena to Cloudflare, Inc.",
+  "company": "네이버·카카오",
+  "court_id": "cand",
+  "dateFiled": "2026-11-23",
+  "url": "https://www.courtlistener.com/docket/75164430/webtoon-entertainment-inc-v-dmca-subpoena-to-cloudflare-inc/",
+  "added": "2026-11-24T04:38:12.694453+00:00",
+  "pinned": false
  }
 }
