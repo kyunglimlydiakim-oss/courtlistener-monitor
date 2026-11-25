@@ -403,5 +403,14 @@
   "url": "https://www.courtlistener.com/docket/75167246/navitas-semiconductor-usa-inc-v-renesas-electronics-coporation/",
   "added": "2026-11-24T21:05:55.935404+00:00",
   "pinned": false
+ },
+ "75170287": {
+  "caseName": "T. Rowe Price Associates, Inc. v. Broadcom Inc.",
+  "company": "브로드컴",
+  "court_id": "mdd",
+  "dateFiled": "2026-11-24",
+  "url": "https://www.courtlistener.com/docket/75170287/t-rowe-price-associates-inc-v-broadcom-inc/",
+  "added": "2026-11-25T04:38:58.560214+00:00",
+  "pinned": false
  }
 }

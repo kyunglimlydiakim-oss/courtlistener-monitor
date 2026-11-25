@@ -1,39 +1,39 @@
 {
- "generated": "2026-11-24T21:05:55.935404+00:00",
- "report": "20261124_2105.md",
+ "generated": "2026-11-25T04:38:58.560214+00:00",
+ "report": "20261125_0438.md",
  "cases": [
   {
    "group": "한국 기업",
-   "company": "삼성전자",
-   "caseName": "Mutual of Enumclaw Insurance Company v. Samsung Electronics America Inc",
-   "dateFiled": "2026-11-23",
-   "court": "District Court, W.D. Washington",
-   "court_id": "wawd",
-   "docketNumber": "3:26-cv-06414",
+   "company": "현대차그룹",
+   "caseName": "Kia Corporation v. The Partnerships and Unincorporated Associations Identified on Schedule A",
+   "dateFiled": "2026-11-24",
+   "court": "District Court, N.D. Illinois",
+   "court_id": "ilnd",
+   "docketNumber": "1:26-cv-14689",
    "nos": "",
    "cause": "",
-   "judge": "Tiffany M. Cartwright",
+   "judge": "Sara Lee Ellis",
    "hits": [
-    "Samsung Electronics"
+    "Kia Corporation"
    ],
-   "url": "https://www.courtlistener.com/docket/75167932/mutual-of-enumclaw-insurance-company-v-samsung-electronics-america-inc/",
-   "routine": "보험사 대위 소송 추정"
+   "url": "https://www.courtlistener.com/docket/75170009/kia-corporation-v-the-partnerships-and-unincorporated-associations/",
+   "routine": "위조품 판매상 일괄 상표소송(Schedule A)"
   },
   {
    "group": "글로벌 반도체",
-   "company": "르네사스",
-   "caseName": "Navitas Semiconductor USA, Inc. v. Renesas Electronics Coporation",
+   "company": "브로드컴",
+   "caseName": "T. Rowe Price Associates, Inc. v. Broadcom Inc.",
    "dateFiled": "2026-11-24",
-   "court": "District Court, E.D. Texas",
-   "court_id": "txed",
-   "docketNumber": "2:26-cv-01056",
+   "court": "District Court, D. Maryland",
+   "court_id": "mdd",
+   "docketNumber": "1:26-cv-04910",
    "nos": "",
    "cause": "",
-   "judge": "James Rodney Gilstrap",
+   "judge": "Richard D. Bennett",
    "hits": [
-    "Renesas Electronics"
+    "Broadcom"
    ],
-   "url": "https://www.courtlistener.com/docket/75167246/navitas-semiconductor-usa-inc-v-renesas-electronics-coporation/",
+   "url": "https://www.courtlistener.com/docket/75170287/t-rowe-price-associates-inc-v-broadcom-inc/",
    "routine": ""
   }
  ]
