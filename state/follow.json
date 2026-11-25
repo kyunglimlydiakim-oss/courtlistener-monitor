@@ -412,5 +412,14 @@
   "url": "https://www.courtlistener.com/docket/75170287/t-rowe-price-associates-inc-v-broadcom-inc/",
   "added": "2026-11-25T04:38:58.560214+00:00",
   "pinned": false
+ },
+ "75176964": {
+  "caseName": "Polar Technologies LLC v. Samsung Electronics Co., Ltd.",
+  "company": "삼성전자",
+  "court_id": "txed",
+  "dateFiled": "2026-11-25",
+  "url": "https://www.courtlistener.com/docket/75176964/polar-technologies-llc-v-samsung-electronics-co-ltd/",
+  "added": "2026-11-25T21:05:55.983952+00:00",
+  "pinned": false
  }
 }

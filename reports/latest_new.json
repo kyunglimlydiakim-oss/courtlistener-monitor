@@ -1,40 +1,40 @@
 {
- "generated": "2026-11-25T04:38:58.560214+00:00",
- "report": "20261125_0438.md",
+ "generated": "2026-11-25T21:05:55.983952+00:00",
+ "report": "20261125_2105.md",
  "cases": [
+  {
+   "group": "한국 기업",
+   "company": "삼성전자",
+   "caseName": "Polar Technologies LLC v. Samsung Electronics Co., Ltd.",
+   "dateFiled": "2026-11-25",
+   "court": "District Court, E.D. Texas",
+   "court_id": "txed",
+   "docketNumber": "2:26-cv-01065",
+   "nos": "",
+   "cause": "",
+   "judge": "",
+   "hits": [
+    "Samsung Electronics"
+   ],
+   "url": "https://www.courtlistener.com/docket/75176964/polar-technologies-llc-v-samsung-electronics-co-ltd/",
+   "routine": ""
+  },
   {
    "group": "한국 기업",
    "company": "현대차그룹",
    "caseName": "Kia Corporation v. The Partnerships and Unincorporated Associations Identified on Schedule A",
-   "dateFiled": "2026-11-24",
+   "dateFiled": "2026-11-25",
    "court": "District Court, N.D. Illinois",
    "court_id": "ilnd",
-   "docketNumber": "1:26-cv-14689",
+   "docketNumber": "1:26-cv-14755",
    "nos": "",
    "cause": "",
-   "judge": "Sara Lee Ellis",
+   "judge": "Thomas Michael Durkin",
    "hits": [
     "Kia Corporation"
    ],
-   "url": "https://www.courtlistener.com/docket/75170009/kia-corporation-v-the-partnerships-and-unincorporated-associations/",
+   "url": "https://www.courtlistener.com/docket/75176278/kia-corporation-v-the-partnerships-and-unincorporated-associations/",
    "routine": "위조품 판매상 일괄 상표소송(Schedule A)"
-  },
-  {
-   "group": "글로벌 반도체",
-   "company": "브로드컴",
-   "caseName": "T. Rowe Price Associates, Inc. v. Broadcom Inc.",
-   "dateFiled": "2026-11-24",
-   "court": "District Court, D. Maryland",
-   "court_id": "mdd",
-   "docketNumber": "1:26-cv-04910",
-   "nos": "",
-   "cause": "",
-   "judge": "Richard D. Bennett",
-   "hits": [
-    "Broadcom"
-   ],
-   "url": "https://www.courtlistener.com/docket/75170287/t-rowe-price-associates-inc-v-broadcom-inc/",
-   "routine": ""
   }
  ]
 }
