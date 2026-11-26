@@ -1,40 +1,23 @@
 {
- "generated": "2026-11-25T21:05:55.983952+00:00",
- "report": "20261125_2105.md",
+ "generated": "2026-11-26T21:06:02.272762+00:00",
+ "report": "20261126_2106.md",
  "cases": [
   {
    "group": "한국 기업",
-   "company": "삼성전자",
-   "caseName": "Polar Technologies LLC v. Samsung Electronics Co., Ltd.",
+   "company": "현대차그룹",
+   "caseName": "Provence v. Hyundai Capital America. Inc., d/b/a/ Kia Motors Finance",
    "dateFiled": "2026-11-25",
-   "court": "District Court, E.D. Texas",
-   "court_id": "txed",
-   "docketNumber": "2:26-cv-01065",
+   "court": "District Court, M.D. Florida",
+   "court_id": "flmd",
+   "docketNumber": "8:26-cv-03615",
    "nos": "",
    "cause": "",
    "judge": "",
    "hits": [
-    "Samsung Electronics"
+    "Hyundai Capital America"
    ],
-   "url": "https://www.courtlistener.com/docket/75176964/polar-technologies-llc-v-samsung-electronics-co-ltd/",
-   "routine": ""
-  },
-  {
-   "group": "한국 기업",
-   "company": "현대차그룹",
-   "caseName": "Kia Corporation v. The Partnerships and Unincorporated Associations Identified on Schedule A",
-   "dateFiled": "2026-11-25",
-   "court": "District Court, N.D. Illinois",
-   "court_id": "ilnd",
-   "docketNumber": "1:26-cv-14755",
-   "nos": "",
-   "cause": "",
-   "judge": "Thomas Michael Durkin",
-   "hits": [
-    "Kia Corporation"
-   ],
-   "url": "https://www.courtlistener.com/docket/75176278/kia-corporation-v-the-partnerships-and-unincorporated-associations/",
-   "routine": "위조품 판매상 일괄 상표소송(Schedule A)"
+   "url": "https://www.courtlistener.com/docket/75179716/provence-v-hyundai-capital-america-inc-dba-kia-motors-finance/",
+   "routine": "개인 소송 추정(유형 미기재)"
   }
  ]
 }

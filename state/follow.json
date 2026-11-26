@@ -421,5 +421,14 @@
   "url": "https://www.courtlistener.com/docket/75176964/polar-technologies-llc-v-samsung-electronics-co-ltd/",
   "added": "2026-11-25T21:05:55.983952+00:00",
   "pinned": false
+ },
+ "75179716": {
+  "caseName": "Provence v. Hyundai Capital America. Inc., d/b/a/ Kia Motors Finance",
+  "company": "현대차그룹",
+  "court_id": "flmd",
+  "dateFiled": "2026-11-25",
+  "url": "https://www.courtlistener.com/docket/75179716/provence-v-hyundai-capital-america-inc-dba-kia-motors-finance/",
+  "added": "2026-11-26T21:06:02.272762+00:00",
+  "pinned": false
  }
 }
